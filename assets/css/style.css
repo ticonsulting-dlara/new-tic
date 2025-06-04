@@ -1,0 +1,59 @@
+:root {
+  --dark-green: #295b39;
+  --medium-green: #16c469;
+  --light-blue: #e8f3f5;
+  --light-green: #d2e4d6;
+  --font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--light-blue);
+  color: var(--dark-green);
+}
+
+.site-header {
+  background-color: var(--dark-green);
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header .logo img {
+  height: 50px;
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav a:hover {
+  color: var(--medium-green);
+}
+
+.site-footer {
+  background-color: var(--dark-green);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+  }
+}

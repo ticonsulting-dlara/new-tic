@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description or 'Servicios de consultoría en TI, soluciones y acompañamiento tecnológico.' }}">
+  <title>{{ title or 'TI Consulting' }}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="TI Consulting">
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="{{ url_for('index') }}">Inicio</a></li>
+        <li><a href="{{ url_for('servicios') }}">Servicios</a></li>
+        <li><a href="{{ url_for('chat') }}">Chat</a></li>
+        <li><a href="{{ url_for('quienes_somos') }}">Quiénes Somos</a></li>
+        <li><a href="{{ url_for('partners') }}">Partners</a></li>
+        <li><a href="{{ url_for('nuestros_clientes') }}">Nuestros Clientes</a></li>
+        <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+  {% block content %}{% endblock %}
+  </main>
+  <footer class="site-footer">
+    <p>&copy; {{ year }} TI Consulting. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts de chat y booking existentes -->
+  <script src="{{ url_for('static', filename='js/tic-chat.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/elevenlabs.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/tic-bookings.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/whatsapp.js') }}"></script>
+</body>
+</html>
