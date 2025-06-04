@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>Contacto</h1>
+<p>Completa el formulario y nos pondremos en contacto a la brevedad.</p>
 <form method="post" action="{{ url_for('send_contact') }}" class="contact-form">
   <label for="name">Nombre:</label>
   <input type="text" id="name" name="name" required>

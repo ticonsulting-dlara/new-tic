@@ -1,6 +1,6 @@
 # Nuevo sitio para TI Consulting
 
-Este repositorio contiene un esqueleto del sitio web de [ticonsulting.cl](https://ticonsulting.cl/) implementado con **Python** y **Flask**. Incluye las plantillas HTML, una hoja de estilos y los scripts de integración para chat y agendamiento.
+Este repositorio contiene una versión moderna del sitio web de [ticonsulting.cl](https://ticonsulting.cl/) implementado con **Python** y **Flask**. Incluye plantillas completas, una hoja de estilos y los scripts de integración para chat y agendamiento. El contenido es una base que puedes personalizar con tu información.
 
 ## Ejecutar localmente
 1. Instala las dependencias (requiere Python 3.8 o superior):
@@ -20,3 +20,5 @@ Este repositorio contiene un esqueleto del sitio web de [ticonsulting.cl](https:
 
 El diseño utiliza la paleta de colores especificada y es responsive para diferentes dispositivos.
 Los mensajes enviados desde el formulario de contacto se almacenan en `contacts.json`.
+
+Incluye secciones de servicios, partners, clientes y un formulario de contacto con almacenamiento local.

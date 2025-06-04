@@ -48,6 +48,89 @@ body {
   background-color: var(--light-green);
   padding: 60px 20px;
   text-align: center;
+  color: var(--dark-green);
+  font-size: 1.2rem;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+}
+
+.cta {
+  text-align: center;
+  padding: 40px 0;
+  background-color: var(--light-green);
+}
+
+.service-list {
+  max-width: 600px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.service-list li {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.partners-list {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.partners-list li {
+  padding: 5px 0;
+}
+
+.clients-list {
+  max-width: 400px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.clients-list li {
+  padding: 5px 0;
+  border-bottom: 1px solid var(--light-green);
+}
+.clients-list li:last-child {
+  border-bottom: none;
+}
+
+.flashes {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+}
+
+.flashes li {
+  background-color: var(--medium-green);
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .button {
