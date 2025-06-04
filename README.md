@@ -5,7 +5,7 @@ Este repositorio contiene un esqueleto del sitio web de [ticonsulting.cl](https:
 ## Ejecutar localmente
 1. Instala las dependencias (requiere Python 3.8 o superior):
    ```bash
-   pip install flask
+   pip install -r requirements.txt
    ```
 2. Inicia la aplicación:
    ```bash
@@ -19,3 +19,4 @@ Este repositorio contiene un esqueleto del sitio web de [ticonsulting.cl](https:
 - `assets/` archivos estáticos (CSS, imágenes y JavaScript)
 
 El diseño utiliza la paleta de colores especificada y es responsive para diferentes dispositivos.
+Los mensajes enviados desde el formulario de contacto se almacenan en `contacts.json`.

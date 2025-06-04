@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from datetime import datetime
+import json
+from pathlib import Path
 
 app = Flask(__name__, static_folder='assets')
 app.secret_key = 'change-this-key'
@@ -52,9 +54,29 @@ def send_contact():
     name = request.form.get('name')
     email = request.form.get('email')
     message = request.form.get('message')
-    # Aquí se podría almacenar la información o enviarla por correo
+
+    data = {
+        'name': name,
+        'email': email,
+        'message': message,
+        'timestamp': datetime.now().isoformat()
+    }
+
+    contacts_file = Path('contacts.json')
+    if contacts_file.exists():
+        existing = json.loads(contacts_file.read_text())
+    else:
+        existing = []
+    existing.append(data)
+    contacts_file.write_text(json.dumps(existing, indent=2, ensure_ascii=False))
+
     flash('Gracias por contactarnos.')
     return redirect(url_for('contacto'))
+
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html', title='Página no encontrada'), 404
 
 if __name__ == '__main__':
     app.run(debug=True)
